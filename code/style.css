@@ -1,0 +1,246 @@
+/*--------------------FONTS--------------------------------*/
+@font-face {
+	font-family: 'outfit';
+	src: url('../fonts/outfit/Outfit-VariableFont_wght.ttf');
+}
+
+@font-face {
+	font-family: 'young-serif';
+	src: url('../fonts/young-serif/YoungSerif-Regular.ttf');
+}
+/*---------------------------------------------------------*/
+
+
+
+/*---------------GLOBAL_VARIABLES---------------*/
+:root {
+	--white: hsl(0, 0%, 100%);
+	--rose: hsl(330, 100%, 98%);
+	--bg: hsl(30, 54%, 90%);
+	--brown: hsl(14, 45%, 36%);
+	--purple: hsl(332, 51%, 32%);
+	--dark: hsl(30, 10%, 34%);
+	--darker: hsl(24, 5%, 18%);
+	--gray: hsl(0, 0%, 87%);;
+}
+/*----------------------------------------------*/
+
+
+
+/*----------------GLOBAL_STYLING----------------*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/*----------------------------------------------*/
+
+/* -------------------51_area-------------------*/
+@media (max-width: 300px)
+{
+	.container {
+		position: relative;
+		display: none;
+	}
+
+	body::before {
+		position: absolute;
+		content: '';
+		background: url('../media/fin_ghadi.jpg') no-repeat center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		height: 200px;
+		width: 250px;
+		background-size: cover;
+	}
+	
+	body::after {
+		position: absolute;
+		content: "";
+		width: 80%;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 600;
+		top: 65%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+/*----------------------------------------------- */
+
+/*--------------MOBILE_VIEW_(default)--------------*/
+.container {
+	background-color: var(--white);
+	font-family: 'outfit';
+}
+
+.img {
+	height: 230px;
+	width: 100%;
+	background: url('../media/omelette.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.content{
+	padding: 0 35px;
+}
+
+.title-description h1 {
+	font-family: 'young-serif';
+	font-weight: 500;
+	font-size: 35px;
+	color: var(--darker);
+	line-height: 45px;
+	margin: 30px 0 15px 0;
+}
+
+.title-description p {
+	color: var(--dark);
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+
+.prep-time {
+	background-color: var(--rose);
+	border-radius: 15px;
+	padding: 20px 25px;
+}
+
+.prep-time h2 {
+	color: var(--purple);
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.prep-time ul,
+.ingredients ul,
+.instructions ol {
+	margin-left: 25px;
+	color: var(--dark);
+}
+
+.prep-time ul li,
+.ingredients ul li,
+.instructions ol li {
+	margin-top: 12px;
+	padding-left: 10px;
+	line-height: 25px;
+}
+
+.prep-time ul li::marker {
+	color: var(--purple);
+}
+
+.prep-time ul li p span,
+.instructions ol li p span {
+	color: var(--dark);
+	font-weight: 700;
+}
+
+.ingredients,
+.instructions {
+	padding: 30px 0;
+	border-bottom: 1px solid var(--gray);
+}
+
+.ingredients .title,
+.instructions .title,
+.nutrition .title {
+	font-family: "young-serif";
+	font-weight: 400;
+	font-size: 30px;
+	margin-bottom: 15px;
+	color: var(--brown);
+}
+
+.ingredients ul li::marker {
+	color: var(--brown);
+}
+
+.instructions ol li::marker {
+	color: var(--brown);
+	font-weight: 600;
+}
+
+.nutrition {
+	padding: 30px 0;
+}
+
+.nutrition p:nth-child(2) {
+	color: var(--dark);
+	padding-bottom: 20px;
+}
+	
+.nutrition table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 15px;
+}
+
+.nutrition tr:not(:last-of-type) {
+	border-bottom: 1px solid var(--gray);
+	margin: 10px;
+} 
+
+.nutrition td {
+	padding: 10px 30px;
+}
+
+.nutrition .label {
+	color: var(--dark);
+}
+
+.nutrition .value {
+	color: var(--brown);
+	font-weight: 700;
+}
+/*-----------------------------------------------*/
+
+
+/*------------Tablet_and_desktop_view------------*/
+@media (min-width: 550px) {
+
+	body {
+		background-color: var(--bg);
+		display: flex;
+		justify-content: center;
+		padding: 30px;
+	}
+
+	.container {
+		width: 650px;
+		border-radius: 20px;
+		padding: 30px;
+	}
+
+	.img {
+		height: 270px;
+		border-radius: 10px;
+	}
+	
+	.content{
+		padding: 0;
+	}
+
+	.nutrition {
+		padding: 30px 0 0 0;
+	}
+}
+/*----------------------------------------------*/
+
+/*----------------larger_display----------------*/
+@media (min-width: 1400px)
+{
+	.container {
+		width: 900px;
+	}
+
+	.img {
+		height: 400px;
+	}
+}
+/*----------------------------------------------*/
