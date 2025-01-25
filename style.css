@@ -46,7 +46,7 @@
 	body::before {
 		position: absolute;
 		content: '';
-		background: url('../media/fin_ghadi.jpg') no-repeat center;
+		background: url('./media/fin_ghadi.jpg') no-repeat center;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -78,7 +78,7 @@
 .img {
 	height: 230px;
 	width: 100%;
-	background: url('../media/omelette.jpeg');
+	background: url('./media/omelette.jpeg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
